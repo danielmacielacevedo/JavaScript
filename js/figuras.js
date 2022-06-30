@@ -75,7 +75,7 @@ console.group("Círcuo");
 //Diámetro
 // const diametroCirculo = radioCirculo * 2;
 // console.log("El diámetro del círculo es de: " + diametroCirculo + "cm");
-function diametroCirculo()
+function diametroCirculo(radio)
 {
     return radio * 2;
 }
@@ -170,3 +170,21 @@ function calcularAreaPerimetroTriangulo()
 
 
 //Círculo
+function calcularDACCirculo()
+{
+    const inputCirculo = document.getElementById("inputRadio");
+    const rCirculo = inputCirculo.value;
+
+
+    const diametroCir = diametroCirculo(rCirculo);
+    const areaCir = areaCirculo(rCirculo);
+    const circunferenciaCir = circunferenciaCirculo(rCirculo);
+    alert(
+        "El diámetro es de " 
+        + diametroCir 
+        + "cm, el área es de " 
+        + areaCir 
+        + "cm^2, y la circunferencia es de " 
+        + circunferenciaCir 
+        + "cm^3");
+}
