@@ -167,3 +167,6 @@ function calcularAreaPerimetroTriangulo()
     const perimetro = perimetroTriangulo(Number(value1), Number(value2), Number(value3));
     alert("El perimetro es de " + perimetro + "cm, y el área es de " + areaT + "cm^2");
 }
+
+
+//Círculo
