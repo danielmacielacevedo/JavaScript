@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="title-header">
-            <h1>FIGURAS GEOMETRICAS</h1> 
+            <h1>CALCULADORA GEOMETRICA</h1> 
         </div>
     </header>
     <main>
@@ -19,14 +19,26 @@
             <h2>CUADRADO</h2>
             <form action="">
                 <label for="inputCuadrado">
-                    Escribe cuanto mide cada lado de tu cuadrado
+                    Escribe cuanto mide un lado de tu cuadrado
                 </label>
-                <input id="inputCuadrado" type="number" >
-                <button type="button" onclick="calcularPerimetroCuadrado()">CALCULAR EL PERIMETRO</button>
-                <button type="button" onclick="calcularAreaCuadrado()">CALCULAR EL AREA</button>
+                <input id="inputCuadrado" type="number" placeholder="Ejemplo: 4">
+                <button type="button" onclick="calcularAreaPerimetroCuadrado()">CALCULAR</button>
             </form>
-        </section>      
-
+        </section>
+        <section class="calculator-container">
+            <p>Calcula el área y perímetro de un</p>
+            <h2>TRIÁNGULO</h2>
+            <form action="">
+                <label for="inputTriangulo1, inputTriangulo2, inputTriangulo3">
+                    Escribe cuanto mide cada lado de tu triángulo
+                </label>
+                <input id="inputTriangulo1" type="number" placeholder="Lado 1">
+                <input id="inputTriangulo2" type="number" placeholder="Lado 2">
+                <input id="inputTriangulo3" type="number" placeholder="Base">
+                <input id="inputTriangulo-altura" type="number" placeholder="Artura">
+                <button type="button" onclick="calcularAreaPerimetroTriangulo()">CALCULAR</button>
+            </form>
+        </section>
     </main>
 
     <script src="./figuras.js"></script>
