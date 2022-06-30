@@ -25,7 +25,7 @@ console.groupEnd();
 
 
 
-// Código del cuadrado
+// Código del triangulo
 console.group("Triangulo");
 
 // const ladoTriangulo1 = 6;
