@@ -26,6 +26,17 @@
             </form>
         </section>
         <section class="calculator-container">
+            <p>Calcula el diámetro, área y circunferencia de un</p>
+            <h2>CÍRCULO</h2>
+            <form action="">
+                <label for="inputRadio">
+                    Escribe cuanto mide el radio de tu círculo:
+                </label>
+                <input id="inputRadio" type="number" placeholder="Radio">
+                <button type="button" onclick="calcularDACCirculo()">CALCULAR</button>
+            </form>
+        </section>
+        <section class="calculator-container">
             <p>Calcula el área y perímetro de un</p>
             <h2>TRIÁNGULO</h2>
             <form action="">
@@ -40,14 +51,16 @@
             </form>
         </section>
         <section class="calculator-container">
-            <p>Calcula el diámetro, área y circunferencia de un</p>
-            <h2>CÍRCULO</h2>
+            <p>Calcula la altura de un</p>
+            <h2>TRIÁNGULO ISÓSCELES</h2>
             <form action="">
-                <label for="inputRadio">
-                    Escribe cuanto mide el radio de tu círculo:
+                <label for="inputTrianguloIS1, inputTrianguloIS2, inputTrianguloIS3">
+                    Escribe cuanto mide cada lado de tu triángulo:
                 </label>
-                <input id="inputRadio" type="number" placeholder="Radio">
-                <button type="button" onclick="calcularDACCirculo()">CALCULAR</button>
+                <input id="inputTrianguloIS1" type="number" placeholder="Lado 1">
+                <input id="inputTrianguloIS2" type="number" placeholder="Lado 2">
+                <input id="inputTrianguloIS3" type="number" placeholder="Base">
+                <button type="button" onclick="calcularAlturaTrianguloIS()">CALCULAR</button>
             </form>
         </section>
     </main>

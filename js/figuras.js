@@ -22,6 +22,44 @@ function areaCuadrado(lado)
 
 console.groupEnd();
 
+// Código del círculo
+console.group("Círcuo");
+
+// Radio
+// const radioCirculo = 4;
+// console.log("El radio del círculo es de: " + radioCirculo + "cm");
+
+//Diámetro
+// const diametroCirculo = radioCirculo * 2;
+// console.log("El diámetro del círculo es de: " + diametroCirculo + "cm");
+function diametroCirculo(radio)
+{
+    return radio * 2;
+}
+
+//PI
+const PI = Math.PI;
+console.log("PI es " + PI);
+
+//Circunferencia
+// const circunferenciaCirculo = diametroCirculo * PI;
+// console.log("La circunferencia del círculo es de: " + circunferenciaCirculo + "cm");
+function circunferenciaCirculo(radio)
+{
+    const diametro = diametroCirculo(radio);
+    return diametro * PI;
+}
+
+//Área
+// const areaCirculo = (radioCirculo * radioCirculo) * PI;
+// console.log("El área del círculo es de: " + areaCirculo + "cm");
+function areaCirculo(radio)
+{
+    return (radio * radio) * PI;
+}
+
+console.groupEnd();
+
 
 
 
@@ -62,47 +100,31 @@ function areaTriangulo(base, altura)
 
 console.groupEnd();
 
+// Código del triangulo isósceles
+console.group("Triangulo Isósceles");
 
 
-
-// Código del círculo
-console.group("Círcuo");
-
-// Radio
-// const radioCirculo = 4;
-// console.log("El radio del círculo es de: " + radioCirculo + "cm");
-
-//Diámetro
-// const diametroCirculo = radioCirculo * 2;
-// console.log("El diámetro del círculo es de: " + diametroCirculo + "cm");
-function diametroCirculo(radio)
+function alturaTrianguloISO(grandeLado1, grandeLado2, grandeBase)
 {
-    return radio * 2;
+    if (grandeLado1 != grandeLado2)
+    {
+        console.error("Los lados 1 y 2 no son iguales");
+    } else {
+        var pequeñoB = grandeBase / 2;
+        var pequeñoBase = grandeLado1;
+
+        var pequeñoBCuadrado = pequeñoB * pequeñoB;
+        var pequeñoBaseCuadrado = pequeñoBase * pequeñoBase;
+
+        var pequeñoLado1 = Math.sqrt(pequeñoBaseCuadrado - pequeñoBCuadrado);
+
+        var alturaTrianguloIsosceles = pequeñoLado1;
+        return alturaTrianguloIsosceles;
+    }
 }
 
-//PI
-const PI = Math.PI;
-console.log("PI es " + PI);
 
-//Circunferencia
-// const circunferenciaCirculo = diametroCirculo * PI;
-// console.log("La circunferencia del círculo es de: " + circunferenciaCirculo + "cm");
-function circunferenciaCirculo(radio)
-{
-    const diametro = diametroCirculo(radio);
-    return diametro * PI;
-}
-
-//Área
-// const areaCirculo = (radioCirculo * radioCirculo) * PI;
-// console.log("El área del círculo es de: " + areaCirculo + "cm");
-function areaCirculo(radio)
-{
-    return (radio * radio) * PI;
-}
-
-console.groupEnd();
-
+console.groupEnd
 
 // Aquí interactuamos con el HTML
 
@@ -118,6 +140,26 @@ function calcularAreaPerimetroCuadrado()
     const areaC = areaCuadrado(valueA);
     const perimetroC = perimetroCuadrado(valueP);
     alert("El perimetro es de " + perimetroC + "cm, y el área es de " + areaC + "cm^2");
+}
+
+//Círculo
+function calcularDACCirculo()
+{
+    const inputCirculo = document.getElementById("inputRadio");
+    const rCirculo = inputCirculo.value;
+
+
+    const diametroCir = diametroCirculo(rCirculo);
+    const areaCir = areaCirculo(rCirculo);
+    const circunferenciaCir = circunferenciaCirculo(rCirculo);
+    alert(
+        "El diámetro es de " 
+        + diametroCir 
+        + "cm, el área es de " 
+        + areaCir 
+        + "cm^2, y la circunferencia es de " 
+        + circunferenciaCir 
+        + "cm^3");
 }
 
 //Triángulo
@@ -168,23 +210,19 @@ function calcularAreaPerimetroTriangulo()
     alert("El perimetro es de " + perimetro + "cm, y el área es de " + areaT + "cm^2");
 }
 
-
-//Círculo
-function calcularDACCirculo()
+function calcularAlturaTrianguloIS()
 {
-    const inputCirculo = document.getElementById("inputRadio");
-    const rCirculo = inputCirculo.value;
+    const input1 = document.getElementById("inputTrianguloIS1");
+    const value1 = input1.value;
 
+    const input2 = document.getElementById("inputTrianguloIS2");
+    const value2 = input2.value;
 
-    const diametroCir = diametroCirculo(rCirculo);
-    const areaCir = areaCirculo(rCirculo);
-    const circunferenciaCir = circunferenciaCirculo(rCirculo);
-    alert(
-        "El diámetro es de " 
-        + diametroCir 
-        + "cm, el área es de " 
-        + areaCir 
-        + "cm^2, y la circunferencia es de " 
-        + circunferenciaCir 
-        + "cm^3");
+    const input3 = document.getElementById("inputTrianguloIS3");
+    const value3 = input3.value;
+
+    
+
+    const alturaTIS = alturaTrianguloISO(value1, value2, value3);
+    alert("La altura es de " + alturaTIS + "cm");
 }
