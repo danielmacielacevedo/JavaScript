@@ -1,10 +1,4 @@
-# JavaScript-Platzi
+# Geometric Calculator withJavaScript
 
-...
-
-## Taller #1: Figuras geometricas
-
-- Primer paso: Definir las formas
-- Segundo paso: Implementar las formulas en JavaScript
-- Tercer paso: Crear funciones 
-- Cuarto paso: Integrar JavaScript con HTML
+# [Ver proyecto web](https://danielmacielacevedo.github.io/geometric-calculator-JavaScript/ "Ver web")
+Proyecto realizado para poder calcular el area, diametro, perimetro, circunferencia de algunas figuras geometricas con una interfaz amigable a los usuarios.
